@@ -44,4 +44,5 @@ This plugin is free but if you install and find it useful then a donation to sup
 ## Version history ##
 
     version     Description
-    2014-12-21  Initial version
+    2.0.1+20150912  Internal code change
+    2014-12-21      Initial version

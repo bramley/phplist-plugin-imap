@@ -48,8 +48,9 @@ class ImapPlugin extends phplistPlugin
 
     public function activate()
     {
-          require $this->coderoot . 'imap.php';
-          set_include_path(get_include_path() . PATH_SEPARATOR . $this->coderoot . 'PEAR');
+        parent::activate();
+        require $this->coderoot . 'imap.php';
+        set_include_path(get_include_path() . PATH_SEPARATOR . $this->coderoot . 'PEAR');
     }
 
     public function adminmenu()
