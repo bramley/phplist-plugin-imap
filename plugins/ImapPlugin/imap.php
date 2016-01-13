@@ -39,8 +39,12 @@ function imap_base64($string)
 
 function imap_headerinfo($pop3, $messageNumber)
 {
-    $a = $pop3->getParsedHeaders($messageNumber);
-    return (object)$a;
+    $headers = (object)$pop3->getParsedHeaders($messageNumber);
+
+    if (!isset($headers->date) && isset($headers->Date)) {
+        $headers->date = $headers->Date;
+    }
+    return $headers;
 }
 
 function imap_body($pop3, $messageNumber)

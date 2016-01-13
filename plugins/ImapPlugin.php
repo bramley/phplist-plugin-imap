@@ -1,6 +1,6 @@
 <?php
 /**
- * ImapPlugin for phplist
+ * ImapPlugin for phplist.
  * 
  * This file is a part of ImapPlugin.
  *
@@ -14,16 +14,15 @@
  * GNU General Public License for more details.
  * 
  * @category  phplist
- * @package   ImapPlugin
+ *
  * @author    Duncan Cameron
  * @copyright 2014 Duncan Cameron
  * @license   http://www.gnu.org/licenses/gpl.html GNU General Public License, Version 3
  */
 
- /**
- * Registers the plugin with phplist
+/**
+ * Registers the plugin with phplist.
  */
-
 class ImapPlugin extends phplistPlugin
 {
     const VERSION_FILE = 'version.txt';
@@ -58,4 +57,3 @@ class ImapPlugin extends phplistPlugin
         return array();
     }
 }
-
