@@ -44,6 +44,7 @@ This plugin is free but if you install and find it useful then a donation to sup
 ## Version history ##
 
     version     Description
+    2.0.3+20160316  Added dependencies
     2.0.2+20160113  Fix problem with date header
     2.0.1+20150912  Internal code change
     2014-12-21      Initial version

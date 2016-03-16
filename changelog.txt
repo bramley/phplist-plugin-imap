@@ -1,3 +1,6 @@
+version 2.0.3+20160316
+      Add dependency on imap not already being loaded
+
 version 2.0.2+20160113
       Ensure date header is set
 

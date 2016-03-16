@@ -45,6 +45,18 @@ class ImapPlugin extends phplistPlugin
         parent::__construct();
     }
 
+    /**
+     * Provide the dependencies for enabling this plugin.
+     *
+     * @return array
+     */
+    public function dependencyCheck()
+    {
+        return array(
+            'IMAP extension must not already be loaded' => !extension_loaded('imap'),
+        );
+    }
+
     public function activate()
     {
         parent::activate();
