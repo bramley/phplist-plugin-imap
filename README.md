@@ -44,6 +44,7 @@ This plugin is free but if you install and find it useful then a donation to sup
 ## Version history ##
 
     version     Description
+    2.1.1+20230204  Revised dependency checks
     2.1.0+20230204  Changes for php 8 compatibility
     2.0.3+20160316  Added dependencies
     2.0.2+20160113  Fix problem with date header
