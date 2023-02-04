@@ -11,16 +11,17 @@ function imap_open($mailbox, $user, $password, $options)
     preg_match('/{(.+):(\d+).*?}/', $mailbox, $matches);
     $server = $matches[1];
     $port = $matches[2];
-//  output("$server.$port.");
     $pop3 = new Net_POP3();
 
     if (!$pop3->connect($server, $port)) {
         $imap_last_error = "Unable to connect to $server:$port";
+
         return false;
     }
 
     if (PEAR::isError($ret = $pop3->login($user, $password, 'USER'))) {
         $imap_last_error = $ret->getMessage();
+
         return false;
     }
 
@@ -39,11 +40,12 @@ function imap_base64($string)
 
 function imap_headerinfo($pop3, $messageNumber)
 {
-    $headers = (object)$pop3->getParsedHeaders($messageNumber);
+    $headers = (object) $pop3->getParsedHeaders($messageNumber);
 
     if (!isset($headers->date) && isset($headers->Date)) {
         $headers->date = $headers->Date;
     }
+
     return $headers;
 }
 
@@ -78,4 +80,3 @@ function imap_last_error()
 
     return $imap_last_error;
 }
-
