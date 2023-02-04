@@ -1,3 +1,11 @@
+version 2.1.0+20230204
+      Upgrade PEAR class to 1.10.10
+      Upgrade Socket class to 1.2.2
+      Remove redundant PEAR5 class
+      Upgrade csfixer configuration
+      Changes for php 8 compatibility
+      Fix php 8 fatal error
+
 version 2.0.3+20160316
       Add dependency on imap not already being loaded
 

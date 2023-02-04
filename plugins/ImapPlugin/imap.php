@@ -2,7 +2,7 @@
 
 define('CL_EXPUNGE', 1);
 
-function imap_open($mailbox, $user, $password, $options)
+function imap_open($mailbox, $user, $password, $options = 0)
 {
     require 'Net/POP3.php';
 
