@@ -51,9 +51,9 @@ require_once 'Net/Socket.php';
 * For usage see the example script
 */
 
-define('NET_POP3_STATE_DISCONNECTED',  1, true);
-define('NET_POP3_STATE_AUTHORISATION', 2, true);
-define('NET_POP3_STATE_TRANSACTION',   4, true);
+define('NET_POP3_STATE_DISCONNECTED',  1);
+define('NET_POP3_STATE_AUTHORISATION', 2);
+define('NET_POP3_STATE_TRANSACTION',   4);
 
 class Net_POP3
 {
@@ -147,7 +147,7 @@ class Net_POP3
     * the socket object.
     *
     */
-    function Net_POP3()
+    function __construct()
     {
         $this->_timestamp =  ''; // Used for APOP
         $this->_maildrop  =  array();
